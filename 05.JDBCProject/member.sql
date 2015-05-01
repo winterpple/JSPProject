@@ -1,5 +1,6 @@
 create user jspuserc identified by jsp1234;
 
+-- drop table member //이렇게 하면 지워짐
 -- SQL
 -- 1) 데이터 정의 언어 (DDL) : create, alter, drop
 -- 2) 데이터 조작 언어 (DML) : insert, update, delete, select
@@ -12,12 +13,12 @@ create table member
 	password	varchar2(10),
 	name		varchar2(20),
 	age			number,
-	gender		char(1),
+	gender		char(6),
 	addr		varchar2(100),
 	regdatqa	date			default sysdate --오라클에서 오늘 날자 들어가게 해주는 명령어
 )
 
-select * from member
+select * from member --요거를 실행시켜야 리절트 표가 보임!
 where id = 'test1'
 
 insert into member
